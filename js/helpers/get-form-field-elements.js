@@ -1,4 +1,4 @@
-export default function getFormFieldElements(FORM_ELEMENT_IDS) {
+export default FORM_ELEMENT_IDS => {
   const formFieldElements = {};
 
   for (const FIELD_ID in FORM_ELEMENT_IDS) {
@@ -8,4 +8,4 @@ export default function getFormFieldElements(FORM_ELEMENT_IDS) {
   }
 
   return formFieldElements;
-}
+};

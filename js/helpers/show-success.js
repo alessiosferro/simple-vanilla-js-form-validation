@@ -1,4 +1,4 @@
-import { VALIDATION_CLASSES } from '../_constants.js';
+import VALIDATION_CLASSES from '../constants/validation-classes.js';
 
 export default function showSuccess(input, message) {
   const { FORM_GROUP_SUCCESS, FORM_GROUP_ERROR } = VALIDATION_CLASSES;

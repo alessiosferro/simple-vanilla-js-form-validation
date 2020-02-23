@@ -1,4 +1,4 @@
-import { VALIDATION_CLASSES } from '../_constants.js';
+import VALIDATION_CLASSES from '../constants/validation-classes.js';
 
 export default function showError(input, message) {
   const {
