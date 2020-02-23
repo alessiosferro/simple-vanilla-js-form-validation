@@ -4,20 +4,21 @@ import capitalize from './capitalize.js';
 export default (inputElement, minLength, maxLength) => {
   const inputName = capitalize(inputElement.name);
 
+  let errorMessage;
+
   if (inputElement.value.trim().length < minLength) {
-    showError(
-      inputElement,
-      `${inputName} must be at least ${minLength} characters.`
-    );
+    errorMessage = `${inputName} must be at least ${minLength} characters.`;
+
+    showError(inputElement, errorMessage);
 
     return false;
   }
 
   if (inputElement.value.trim().length > maxLength) {
-    showError(
-      inputElement,
-      `${inputName} must be less than ${maxLength + 1} characters.`
-    );
+    errorMessage = `${inputName} must be less than ${maxLength +
+      1} characters.`;
+
+    showError(inputElement, errorMessage);
 
     return false;
   }

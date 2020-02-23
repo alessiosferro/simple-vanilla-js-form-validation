@@ -5,6 +5,8 @@ export default function showSuccess(input, message) {
 
   let formGroupDivElement = input.parentElement;
 
-  formGroupDivElement.classList.remove(FORM_GROUP_ERROR);
+  if (formGroupDivElement.classList.contains(FORM_GROUP_ERROR))
+    formGroupDivElement.classList.remove(FORM_GROUP_ERROR);
+
   formGroupDivElement.classList.add(FORM_GROUP_SUCCESS);
 }

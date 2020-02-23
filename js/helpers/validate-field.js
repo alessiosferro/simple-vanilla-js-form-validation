@@ -1,8 +1,8 @@
 import checkFieldIsValid from './check-valid-field.js';
-import isValidEmail from './is-valid-email.js';
+import isValidEmailFn from './is-valid-email.js';
 import checkLength from './check-length.js';
 import FORM_ELEMENT_IDS from '../constants/form-element-ids.js';
-import passwordMatch from './password-match.js';
+import passwordMatchFn from './password-match.js';
 
 const PASSWORD_MIN_LENGTH = 6;
 const PASSWORD_MAX_LENGTH = 25;
@@ -27,9 +27,9 @@ export default (inputElement, field) => {
       );
 
     case FORM_ELEMENT_IDS.EMAIL_ID:
-      return checkFieldIsValid(inputElement, isValidEmail);
+      return checkFieldIsValid(inputElement, isValidEmailFn);
 
     case FORM_ELEMENT_IDS.PASSWORD_CONFIRM_ID:
-      return checkFieldIsValid(inputElement, passwordMatch);
+      return checkFieldIsValid(inputElement, passwordMatchFn);
   }
 };

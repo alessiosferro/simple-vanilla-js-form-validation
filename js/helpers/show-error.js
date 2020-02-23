@@ -8,7 +8,10 @@ export default function showError(input, message) {
   } = VALIDATION_CLASSES;
 
   let formGroupDivElement = input.parentElement;
-  formGroupDivElement.classList.remove(FORM_GROUP_SUCCESS);
+
+  if (formGroupDivElement.classList.contains(FORM_GROUP_SUCCESS))
+    formGroupDivElement.classList.remove(FORM_GROUP_SUCCESS);
+
   formGroupDivElement.classList.add(FORM_GROUP_ERROR);
 
   let feedbackSmallElement = formGroupDivElement.querySelector(

@@ -5,14 +5,14 @@ import replaceCamelCase from './replace-camel-case.js';
 
 export default inputElement => {
   if (inputElement.value.trim() === '') {
-    showError(
-      inputElement,
-      `${capitalize(replaceCamelCase(inputElement.name))} is required.`
-    );
+    let errorMessage = `${capitalize(
+      replaceCamelCase(inputElement.name)
+    )} is required.`;
+
+    showError(inputElement, errorMessage);
 
     return false;
   }
 
-  showSuccess(inputElement);
   return true;
 };
