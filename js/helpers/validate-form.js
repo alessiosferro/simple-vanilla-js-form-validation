@@ -2,10 +2,9 @@ import checkRequired from './check-required.js';
 import showSuccess from './show-success.js';
 import validateInputField from './validate-field.js';
 import getFormFieldElements from './get-form-field-elements.js';
-import FORM_ELEMENT_IDS from '../constants/form-element-ids.js';
 
 export default () => {
-  let formFieldElements = getFormFieldElements(FORM_ELEMENT_IDS);
+  let formFieldElements = getFormFieldElements();
 
   for (const field in formFieldElements) {
     const inputElement = formFieldElements[field];
