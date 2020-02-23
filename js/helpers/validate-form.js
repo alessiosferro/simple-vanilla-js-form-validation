@@ -1,8 +1,8 @@
 import checkRequired from './check-required.js';
 import showSuccess from './show-success.js';
 import validateInputField from './validate-field.js';
-import getFormFieldElements from './helpers/get-form-field-elements.js';
-import FORM_ELEMENT_IDS from './constants/form-element-ids.js';
+import getFormFieldElements from './get-form-field-elements.js';
+import FORM_ELEMENT_IDS from '../constants/form-element-ids.js';
 
 export default () => {
   let formFieldElements = getFormFieldElements(FORM_ELEMENT_IDS);
